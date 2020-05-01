@@ -24,7 +24,7 @@
                     <form action="save_task.php" method="POST">
                     
                         <div class="form-group">
-                            <label for="titulo">TITULO: </label>
+                            <label for="titulo">TITULOSS: </label>
                             <input type="text" name="title" class="form-control" placeholder="Titulo de la nota" autofocus>
                         </div>
                         <div class="form-group">
@@ -57,18 +57,23 @@
                 </thead>
                 <tbody>
                     <?php
-                    $query = "SELECT * FROM task";
-                    $result_tasks = mysqli_query($conn, $query);    
-                    while($row = mysqli_fetch_assoc($result_tasks)) { ?>
+                        include_once "db.php";
+                        $sentencia = $base_de_datos->query("SELECT * FROM task");
+                        $mascotas = $sentencia->fetchAll(PDO::FETCH_OBJ);
+                        foreach($mascotas as $mascota){
+                    ?>
+                    
                     <tr>
-                        <td><?php echo $row['title']; ?></td>
-                        <td><?php echo $row['description']; ?></td>
-                        <td><?php echo $row['created_at']; ?></td>
+                        <td><?php echo $mascota->title ?></td>
+                        <td><?php echo $mascota->description ?></td>
+                        <td><?php echo $mascota->created_at ?></td>
                         <td>
-                            <a href="edit.php?id=<?php echo $row['id']?>" class="btn btn-secondary">
+                            <!-- estara abajo lo q deba poner cuando desarrolle el editar -->
+                            <!-- edit.php?id=<?php //echo $mascota->id?> -->
+                            <a href="" class="btn btn-secondary">
                                 <i class="fas fa-marker"></i>
                             </a>
-                            <a href="delete_task.php?id=<?php echo $row['id']?>" class="btn btn-danger">
+                            <a href="delete_task.php?id=<?php echo $mascota->id?>" class="btn btn-danger">
                                 <i class="far fa-trash-alt"></i>
                             </a>
                         </td>
@@ -81,3 +86,5 @@
 </main>
 
 <?php include('includes/footer.php'); ?>
+
+

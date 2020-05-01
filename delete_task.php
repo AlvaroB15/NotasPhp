@@ -1,12 +1,14 @@
 <?php
-
-include("db.php");
+// include("db.php");
+include_once "db.php";
 
 if(isset($_GET['id'])) {
   $id = $_GET['id'];
-  $query = "DELETE FROM task WHERE id = $id";
-  $result = mysqli_query($conn, $query);
-  if(!$result) {
+
+  $query = $base_de_datos->prepare("DELETE FROM task WHERE id = ?;");
+  $resultado = $query->execute([$id]);
+
+  if(!$resultado) {
     die("Query Failed.");
   }
 
@@ -14,5 +16,6 @@ if(isset($_GET['id'])) {
   $_SESSION['message_type'] = 'danger';
   header('Location: index.php');
 }
+
 
 ?>
