@@ -1,5 +1,7 @@
 <?php include("db.php"); ?>
 
+<?php date_default_timezone_set("America/Lima"); ?>
+
 <?php include('includes/header.php'); ?>
 
 <main>
@@ -66,7 +68,9 @@
                     <tr>
                         <td><?php echo $mascota->title ?></td>
                         <td><?php echo $mascota->description ?></td>
-                        <td><?php echo $mascota->created_at ?></td>
+                        <td><?php  $tiempo= $mascota->created_at;
+                        $time = $tiempo->format('d-m-Y h:i:s'); echo $time ?>
+                         </td>
                         <td>
                             <!-- estara abajo lo q deba poner cuando desarrolle el editar -->
                             <!-- edit.php?id=<?php //echo $mascota->id?> -->
