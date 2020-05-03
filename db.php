@@ -15,7 +15,7 @@ session_start();
 // if(!conn){
 //   die(mysqli_error($mysqli));
 // }
-
+// $start_script= false;
 
 $contraseña = "218314ef88a26eec4696998743fc71739693cd49b883c63d50b6cef6cd7573e0";
 $usuario = "qrujeifnhirixc";

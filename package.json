@@ -1,0 +1,27 @@
+{
+  "name": "notasPhp",
+  "version": "1.0.0",
+  "description": "![](docs/screenshot.png)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlvaroB15/NotasPhp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlvaroB15/NotasPhp/issues"
+  },
+  "homepage": "https://github.com/AlvaroB15/NotasPhp#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "twilio": "^3.43.0"
+  }
+}

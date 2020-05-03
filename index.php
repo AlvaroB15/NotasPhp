@@ -1,6 +1,6 @@
 <?php include("db.php"); ?>
 
-<?php date_default_timezone_set("America/Lima"); ?>
+<?php  ?>
 
 <?php include('includes/header.php'); ?>
 
@@ -23,7 +23,7 @@
 
                 <!-- ADD TASK FORM -->
                 <div class="card card-body">
-                    <form action="save_task.php" method="POST">
+                    <form id="task-form" action="save_task.php" method="POST">
                     
                         <div class="form-group">
                             <label for="titulo">TITULOSS: </label>
@@ -61,14 +61,20 @@
                     <?php
                         include_once "db.php";
                         $sentencia = $base_de_datos->query("SELECT * FROM task");
+                        // $sentencia = $base_de_datos->query("SELECT title, description, TO_TIMESTAMP(created_at, 'YYYY-MM-DD HH12:MI:SS') FROM task");
                         $mascotas = $sentencia->fetchAll(PDO::FETCH_OBJ);
+
                         foreach($mascotas as $mascota){
                     ?>
                     
                     <tr>
                         <td><?php echo $mascota->title ?></td>
                         <td><?php echo $mascota->description ?></td>
-                        <td><?php echo $mascota->created_at ?> </td>
+                        <td><?php 
+                            
+                            $m = $mascota->created_at;
+                            echo $m;
+                              ?> </td>
                         <td>
                             <!-- estara abajo lo q deba poner cuando desarrolle el editar -->
                             <!-- edit.php?id=<?php //echo $mascota->id?> -->
@@ -85,6 +91,37 @@
             </table>
         </div>    
     </div>
+
+    <?php 
+        $request = '{
+            "api_key":"f22f8c8bee544a719eb6b799aca51c36",
+            "messages":[
+                {
+                    "from":"GOOD PIZZA",
+                    "to":"937810661",
+                    "text":"Hi John, today 2x1 in pizzas, watch the game like a boss with our new pepperoni pizza!",
+                    "send_at":"2018-02-18 17:30:00"
+                }
+            ]
+        }';
+                    
+        $headers = array('Content-Type: application/json');        	
+        
+        $ch = curl_init('https://api.gateway360.com/api/3.0/sms/send');
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $request);
+        
+        $result = curl_exec($ch);
+         
+        if (curl_errno($ch) != 0 ){
+            die("curl error: ".curl_errno($ch));
+        }   
+    
+    ?>
+
+
 </main>
 
 <?php include('includes/footer.php'); ?>
