@@ -9,7 +9,7 @@ if (isset($_POST['save_task'])) {
   $title = $_POST['title'];
   $description = $_POST['description'];
 
-  $query = $base_de_datos->prepare("INSERT INTO task(title, description, created_at) VALUES (?,?, NOW())");
+  $query = $base_de_datos->prepare("INSERT INTO task(title, description) VALUES (?,?)");
   $resultado = $query->execute([$title, $description]);
 
   // $query = "INSERT INTO task(title, description) VALUES ('$title', '$description')";
