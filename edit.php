@@ -12,6 +12,7 @@ if  (isset($_GET['id'])) {
     $title = $row['title'];
     $description = $row['description'];
   }
+  
 }
 
 if (isset($_POST['update'])) {

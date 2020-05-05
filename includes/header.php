@@ -13,6 +13,14 @@
 
     <nav class="navbar navbar-dark bg-dark">
       <div class="container">
-        <a class="navbar-brand" href="index.php"><strong>GUARDAR TAREAS</strong></a>
+        <a class="navbar-brand" href="index.php"><strong>INICIO</strong></a>
+        <a class="navbar-brand" href="login.php" ><strong>LOGIN</strong></a>
+        <!-- <a class="navbar-brand" href=""><strong>REGISTRAR</strong></a> -->
+        <!-- <div class="container">
+          <a href="login.php">Login</a>
+        </div> -->
+
       </div>
+
+      
     </nav>

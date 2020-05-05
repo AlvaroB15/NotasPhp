@@ -23,7 +23,7 @@
 
                 <!-- ADD TASK FORM -->
                 <div class="card card-body">
-                    <form id="task-form" action="save_task.php" method="POST">
+                    <form id="task-form" action="save_task.php " method="POST">
                     
                         <div class="form-group">
                             <label for="titulo">TITULOSS: </label>
