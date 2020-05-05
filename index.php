@@ -126,7 +126,7 @@
 
 
 </main>
-
+<?php include('includes/header-footer.php'); ?>
 <?php include('includes/footer.php'); ?>
 
 
