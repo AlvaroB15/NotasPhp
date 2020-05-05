@@ -20,6 +20,8 @@ $google_client->addScope('email');
 
 $google_client->addScope('profile');
 
+// $terminar = true;
+
 //start session on web page
 session_start();
 
