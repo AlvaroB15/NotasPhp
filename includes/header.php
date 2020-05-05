@@ -24,22 +24,13 @@
         <?php
           //This is for check user has login into system by using Google account, if User not login into system then it will execute if block of code and make code for display Login link for Login using Google account.
           if(!isset($_SESSION['access_token'])){
-              //Create a URL to obtain user authorization
-
+            //Create a URL to obtain user authorization
             echo '<a class="navbar-brand" href="'.$google_client->createAuthUrl().'" ><strong>LOGIN</strong></a>';
-
-              // $login_button =  '<a class="navbar-brand" href="'.$google_client->createAuthUrl().'" ><strong>LOGIN</strong></a>';
 
           }
         ?>
 
         <a class="navbar-brand" href="logout.php"><strong>LOGOUT</strong></a>
-
-        <!-- <a class="navbar-brand" href="'.$google_client->createAuthUrl().'" ><strong>LOGIN</strong></a> -->
-        <!-- <a class="navbar-brand" href=""><strong>REGISTRAR</strong></a> -->
-        <!-- <div class="container">
-          <a href="login.php">Login</a>
-        </div> -->
 
       </div>
 

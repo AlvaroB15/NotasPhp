@@ -82,8 +82,6 @@
                                 <i class="fas fa-marker"></i>
                             </a>
                             <!-- s -->
-                            <a href="edit.php?id=<?php echo $mascota->id?>" class="btn btn-secondary">
-                                <i class="fas fa-marker"></i>
                             </a>
               
                             <a href="delete_task.php?id=<?php echo $mascota->id?>" class="btn btn-danger">
@@ -98,31 +96,31 @@
     </div>
 
     <?php 
-        $request = '{
-            "api_key":"f22f8c8bee544a719eb6b799aca51c36",
-            "messages":[
-                {
-                    "from":"GOOD PIZZA",
-                    "to":"937810661",
-                    "text":"Hi John, today 2x1 in pizzas, watch the game like a boss with our new pepperoni pizza!",
-                    "send_at":"2018-02-18 17:30:00"
-                }
-            ]
-        }';
+        // $request = '{
+        //     "api_key":"f22f8c8bee544a719eb6b799aca51c36",
+        //     "messages":[
+        //         {
+        //             "from":"GOOD PIZZA",
+        //             "to":"937810661",
+        //             "text":"Hi John, today 2x1 in pizzas, watch the game like a boss with our new pepperoni pizza!",
+        //             "send_at":"2018-02-18 17:30:00"
+        //         }
+        //     ]
+        // }';
                     
-        $headers = array('Content-Type: application/json');        	
+        // $headers = array('Content-Type: application/json');        	
         
-        $ch = curl_init('https://api.gateway360.com/api/3.0/sms/send');
-        curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $request);
+        // $ch = curl_init('https://api.gateway360.com/api/3.0/sms/send');
+        // curl_setopt($ch, CURLOPT_POST, 1);
+        // curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
+        // curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+        // curl_setopt($ch, CURLOPT_POSTFIELDS, $request);
         
-        $result = curl_exec($ch);
+        // $result = curl_exec($ch);
          
-        if (curl_errno($ch) != 0 ){
-            die("curl error: ".curl_errno($ch));
-        }   
+        // if (curl_errno($ch) != 0 ){
+        //     die("curl error: ".curl_errno($ch));
+        // }   
     
     ?>
 
