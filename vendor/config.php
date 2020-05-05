@@ -7,7 +7,7 @@
 
     $google_client->setClientSecret('Buw9RgVsN22tt1HdjKKfebIp');
     
-    $google_client->setRedirectUri('http://localhost:8080/notasPhp/index.php');
+    $google_client->setRedirectUri('https://notas-personales.herokuapp.com/');
     
     $google_client->addScope('email');
     

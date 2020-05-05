@@ -81,6 +81,11 @@
                             <a href="" class="btn btn-secondary">
                                 <i class="fas fa-marker"></i>
                             </a>
+                            <!-- s -->
+                            <a href="edit.php?id=<?php echo $mascota->id?>" class="btn btn-secondary">
+                                <i class="fas fa-marker"></i>
+                            </a>
+              
                             <a href="delete_task.php?id=<?php echo $mascota->id?>" class="btn btn-danger">
                                 <i class="far fa-trash-alt"></i>
                             </a>

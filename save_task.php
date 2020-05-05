@@ -3,7 +3,7 @@
 // include('db.php');
 include_once "db.php";
 
-$start_script = true;
+// $start_script = true;
 
 if (isset($_POST['save_task'])) {
   $title = $_POST['title'];
@@ -28,4 +28,4 @@ if (isset($_POST['save_task'])) {
 
 ?>
 
-<script src="index.js"></script>
+<!-- <script src="index.js"></script> -->
