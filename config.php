@@ -13,7 +13,7 @@ $google_client->setClientId('352759389830-r7ba3haoequa6mojg4qj3k3agupcs0du.apps.
 $google_client->setClientSecret('Buw9RgVsN22tt1HdjKKfebIp');
 
 //Set the OAuth 2.0 Redirect URI
-$google_client->setRedirectUri('https://autenticacion-google.herokuapp.com/');
+$google_client->setRedirectUri('https://notas-personales.herokuapp.com/');
 
 //
 $google_client->addScope('email');
