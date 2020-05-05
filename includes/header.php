@@ -26,7 +26,7 @@
           if(!isset($_SESSION['access_token'])){
               //Create a URL to obtain user authorization
               // $login_button = '<a href="'.$google_client->createAuthUrl().'"><img src="sign-in-with-google.png" /></a>';
-              echo '<a class="navbar-brand" href="'.$google_client->createAuthUrl().'" ><strong>LOGIN</strong></a>';
+              $login_button = '<a class="navbar-brand" href="'.$google_client->createAuthUrl().'" ><strong>LOGIN</strong></a>';
               // $login_button = ' <button type="button" class="btn btn-outline-info btn-lg" onclick = " location.href= "'.$google_client->createAuthUrl().'" ">Logeate con Google</button>';
           }
         ?>
