@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>PHP CRUD MYSQL</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <meta name="google-site-verification" content="9NOxi-n_px-5JH2MzkxAt-BQI6mBMaTLkTHiISmg4Fg" />
+    
     <!-- BOOTSTRAP 4 -->
     <link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.min.css">
     <!-- FONT AWESOEM -->
