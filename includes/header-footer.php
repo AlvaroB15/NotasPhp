@@ -15,9 +15,6 @@
   </head>
 
   <body>
-    <?php
-      include('login.php');
-    ?>
 
     <nav class="navbar navbar-dark bg-dark">
         <div class="container">
