@@ -21,18 +21,19 @@
     session_start();
 
 
+// Servicio de Facebook
 
+  if (!session_id())
+  {
+      session_start();
+  }
 
-if (!session_id())
-{
-    session_start();
-}
+  // Call Facebook API
 
-// Call Facebook API
-
-$facebook = new \Facebook\Facebook([
-  'app_id'      => '254909415890834',
-  'app_secret'     => 'da9aae494592b74210fb4346327a2c5e',
-  'default_graph_version'  => 'v2.10'
-]);
+  $facebook = new \Facebook\Facebook([
+    'app_id'      => '254909415890834',
+    'app_secret'     => 'da9aae494592b74210fb4346327a2c5e',
+    'default_graph_version'  => 'v2.10'
+  ]);
+  
 ?>

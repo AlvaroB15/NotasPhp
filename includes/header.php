@@ -22,6 +22,9 @@
       include('login.php');
     ?>
 
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v7.0&appId=254909415890834&autoLogAppEvents=1"></script>
+
     <nav class="navbar navbar-dark bg-dark">
       <div class="container">
 
@@ -34,6 +37,10 @@
             echo '<a class="navbar-brand" href="'.$google_client->createAuthUrl().'" ><strong>LOGIN</strong></a>';
           }
         ?>
+
+        <!-- <a class="navbar-brand" href="logout.php"><strong>LOGIN FACEBOOK</strong></a> -->
+
+        <div class="fb-login-button" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false" data-width=""></div>
 
         <a class="navbar-brand" href="logout.php"><strong>LOGOUT</strong></a>
 
