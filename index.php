@@ -60,7 +60,7 @@
                 <tbody>
                     <?php
                         include_once "db.php";
-                        $sentencia = $base_de_datos->query("SELECT * FROM task");
+                        $sentencia = $base_de_datos->query("SELECT * FROM task ORDER BY created_at DESC");
                         // $sentencia = $base_de_datos->query("SELECT title, description, TO_TIMESTAMP(created_at, 'YYYY-MM-DD HH12:MI:SS') FROM task");
                         $mascotas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 
